@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+  let lastLevel = localStorage.getItem("lastLevel");
+  
+  localStorage.setItem("lastLevel", 6);
+
+  if (lastLevel != 5) {
+    window.location.href = "../intro/new.html";
+  }
+</script>
     <title>Image Answer Challenge</title>
     <style>
         body {
