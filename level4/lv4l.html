@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Answer Challenge</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        #header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #logo {
+            width: 200px;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff0000;
+            margin-top: 20px;
+            font-size: 300%;
+        }
+
+        #image-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        #image-container img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        #answer-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #answer-input {
+            padding: 5px;
+        }
+
+        #submit-button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+	#print-button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img id="logo" src="gg.png" alt="Cyber Logo">
+        <h1>Level 4</h1>
+    </div>
+    <h1>which camera was used to take this image?</h1>
+  
+    <div id="image-container">
+        <img src="pic.jpg" alt="osnit">
+    </div>
+<div id="output"></div>
+
+<button id="print-button">Show image properties</button>
+    <div id="answer-form">
+        <form id="answer-form" onsubmit="validateAnswer(event)">
+            <input type="text" id="answer-input" name="answer" placeholder="Enter your answer" required>
+            <br>
+            <input type="submit" id="submit-button" value="Submit">
+        </form>
+    </div>
+  <h2>forensics</h2>
+    <script>
+	const printButton = document.getElementById('print-button')
+printButton.addEventListener('click', printText)
+
+function printText() {
+  const outputDiv = document.getElementById('output')
+  outputDiv.innerHTML = '<h2>Image</h2><pre>Dimensions 1975 x 1646<br>Width 1975 pixels<br>Height 1646 pixels<br>Horizontal resolution 164 dpi<br>Vertical resolution 164 dpi<br>Bit depth 24<br>Compression Resolution unit 2<br>Color representation sRGB<br>Compressed bits/pixel 4</pre><h2>Camera</h2><pre>Camera maker NIKON CORPORATION<br>Camera model: NIKON D70s<br>F-stop f/10<br>Exposure time 1/200 sec</pre>'
+}
+        function validateAnswer(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var answerInput = document.getElementById("answer-input").value;
+
+            if (answerInput === "NIKON D70s") {
+                window.location.href = "../level5/doco.html"; // Redirect to the next page
+            } else {
+                alert("Wrong answer! Please try again."); // Display an error message
+            }
+        }
+    </script>
+</body>
+</html>

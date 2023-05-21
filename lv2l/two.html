@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+<script>
+let lastLevel = localStorage.getItem("lastLevel");
+
+if(lastLevel != 1){
+  window.location.href = "../intro/new.html";
+}
+
+localStorage.setItem("lastLevel", 2);
+</script>
+-->
+    <title>Image Click to Reveal Answer</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        #header {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #logo {
+            width: 200px;
+            height: auto;
+        }
+        #game-container {
+            position: relative;
+            text-align: center;
+        }
+        #game-image {
+            display: inline-block;
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            margin-top: 50px;
+        }
+        #click-area {
+            position: absolute;
+            top: 5%;
+            left: 7%;
+            width: 15%;
+            height: 3%;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        #answer {
+            display: none;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #ff0000; /* Eye-catching color (red) */
+            margin-top: 20px;
+	        font-size: 300%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <img id="logo" src="gg.png" alt="Cyber Logo">
+        <h1>Level 1</h1>
+        <h2>Click the flaw in the page</h2>
+    </div>
+
+    <div id="answer">
+        <h2><a href="..\level2\koko.html" target="_blank">Click here to enter the next level</a></h2>
+      
+    </div>
+  
+    <div id="game-container">
+        <div id="game-image">
+            <img src="sss.png" alt="Image with Clickable Area">
+            <div id="click-area" onclick="revealAnswer()"></div>
+        </div>
+    </div>
+      <h3>phiying</h3>
+    <script>
+
+        function revealAnswer() {
+            var answerElement = document.getElementById('answer');
+            answerElement.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

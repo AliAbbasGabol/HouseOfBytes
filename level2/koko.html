@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Image Answer Challenge</title>
+    <style>
+        body {
+             background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        #header {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #logo {
+            width: 200px;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff0000; /* Eye-catching color (red) */
+            margin-top: 20px;
+	        font-size: 300%;
+       
+        }
+
+        #image-container {
+            margin-top: 50px;
+        }
+
+        #answer-form {
+            margin-top: 20px;
+        }
+
+        #answer-input {
+            padding: 5px;
+        }
+
+        #submit-button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+        <img id="logo" src="gg.png" alt="Cyber Logo">
+        <h1>Level 2</h1>
+    </div>
+    <h1>Image Answer Challenge</h1>
+
+<div id="image-container">
+            <img src="ssc.jpg" alt="binary">
+       
+        </div>
+    
+        <div id="answer-form">
+            <form id="answer-form" onsubmit="validateAnswer(event)">
+                <input type="text" id="answer-input" name="answer" placeholder="Enter your answer" required>
+                <br>
+                <input type="submit" id="submit-button" value="Submit">
+            </form>
+      
+    </div>
+<h2>stagnography</h2>
+    <script>
+        function validateAnswer(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var answerInput = document.getElementById("answer-input").value;
+
+            if (answerInput === "1010001") {
+   window.location.href = "../level3/lv3l.html";  
+} else {
+                alert("Wrong answer! Please try again."); // Display an error message
+            }
+        }
+    </script>
+</body>
+</html>

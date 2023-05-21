@@ -1,0 +1,101 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Countdown Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: black;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333333;
+      }
+
+      p {
+        color: #666666;
+        margin-bottom: 20px;
+      }
+
+      #countdown {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff5555;
+      }
+
+      #redirect-link {
+        display: none;
+        margin-top: 20px;
+      }
+    </style>
+<!--<script>
+localStorage.setItem("lastLevel", 1);
+</script>
+-->
+  </head>
+ <body>
+    
+<video id="background-video" src="bb.mp4" autoplay loop muted></video>
+    <div class="container">
+             <img id="logo" src="gg.png" alt="Cyber Logo">
+      <h1>Welcome to Our Website</h1>
+      <p>Countdown to Level 1:</p>
+      <div id="countdown"></div>
+      <a id="redirect-link" href="\lv2l\two.html">Proceed to Level 1</a>
+    </div>
+<audio src="music.wav" autoplay loop></audio>
+    <script>
+      // Set the countdown date (adjust the date and time accordingly)
+      var countdownDate = new Date("2023-05-21T00:00:00Z").getTime();
+
+      // Update the countdown every 1 second
+      var countdownInterval = setInterval(function() {
+        // Get the current date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the countdown date
+        var distance = countdownDate - now;
+
+        // Calculate remaining time
+        var days = Math.floor(distance / (1000* 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds= Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the countdown
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+        // If the countdown ends, show the redirect link
+        if (distance < 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").innerHTML = "Countdown ended!";
+          document.getElementById("redirect-link").style.display = "block";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

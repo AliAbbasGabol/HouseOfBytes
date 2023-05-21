@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+<script>
+let lastLevel = localStorage.getItem("lastLevel");
+
+if(lastLevel != 2){
+  window.location.href = "../intro/new.html";
+}
+localStorage.setItem("lastLevel", 3);
+</script>
+-->
+    <title>Image Answer Challenge</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        #header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #logo {
+            width: 200px;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff0000;
+            margin-top: 20px;
+            font-size: 300%;
+        }
+
+        #image-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        #image-container img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        #answer-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #answer-input {
+            padding: 5px;
+        }
+
+        #submit-button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img id="logo" src="gg.png" alt="Cyber Logo">
+        <h1>Level 3</h1>
+    </div>
+    <h1>find the logo name</h1>
+   
+    <div id="image-container">
+        <img src="yolo.jpg" alt="osnit">
+    </div>
+
+    <div id="answer-form">
+        <form id="answer-form" onsubmit="validateAnswer(event)">
+            <input type="text" id="answer-input" name="answer" placeholder="Enter your answer" required>
+            <br>
+            <input type="submit" id="submit-button" value="Submit">
+        </form>
+    </div>
+ <h2>osnit</h2>
+    <script>
+        function validateAnswer(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var answerInput = document.getElementById("answer-input").value;
+
+            if (answerInput === "quicksilver") {
+                window.location.href = "../level4/lv4l.html"; // Redirect to the next page
+            } else {
+                alert("Wrong answer! Please try again."); // Display an error message
+            }
+        }
+    </script>
+</body>
+</html>
