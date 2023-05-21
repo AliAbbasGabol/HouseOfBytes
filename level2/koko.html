@@ -14,47 +14,85 @@
 
 	
     <title>Image Answer Challenge</title>
-    <style>
+  <style>
         body {
-             background-color: #000;
+            background-color: #000;
             color: #fff;
             font-family: Arial, sans-serif;
         }
+
         #header {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 5vh;
         }
+
         #logo {
-            width: 200px;
+            width: 30vw;
+            max-width: 200px;
             height: auto;
         }
 
         h1 {
             text-align: center;
-            color: #ff0000; /* Eye-catching color (red) */
-            margin-top: 20px;
-	        font-size: 300%;
-       
+            color: #ff0000;
+            margin-top: 5vh;
+            font-size: 5vw;
         }
 
         #image-container {
-            margin-top: 50px;
+            margin-top: 10vh;
+            display: flex;
+            justify-content: center;
         }
 
         #answer-form {
-            margin-top: 20px;
+            margin-top: 5vh;
+            display: flex;
+            justify-content: center;
         }
 
         #answer-input {
-            padding: 5px;
+            padding: 1vh;
+            font-size: 2vw;
         }
 
         #submit-button {
-            padding: 8px 15px;
+            padding: 1.5vh 3vh;
             background-color: #4CAF50;
             color: white;
             border: none;
             cursor: pointer;
+            font-size: 2vw;
+        }
+
+        @media screen and (max-width: 600px) {
+            #logo {
+                width: 80vw;
+                max-width: 200px;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 8vw;
+            }
+
+            #image-container {
+                margin-top: 20vh;
+            }
+
+            #answer-form {
+                margin-top: 10vh;
+            }
+
+            #answer-input {
+                padding: 2vh;
+                font-size: 4vw;
+            }
+
+            #submit-button {
+                padding: 3vh 6vh;
+                font-size: 4vw;
+            }
         }
     </style>
 </head>
