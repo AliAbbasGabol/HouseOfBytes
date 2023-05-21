@@ -3,13 +3,15 @@
 <head>
 
 <script>
-let lastLevel = localStorage.getItem("lastLevel");
+  let lastLevel = localStorage.getItem("lastLevel");
+  
+  localStorage.setItem("lastLevel", 4);
 
-if(lastLevel != 2){
-  window.location.href = "../intro/new.html";
-}
-
+  if (lastLevel != 3) {
+    window.location.href = "../intro/new.html";
+  }
 </script>
+  
     <title>Image Answer Challenge</title>
     <style>
         body {
