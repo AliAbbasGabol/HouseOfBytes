@@ -1,3 +1,14 @@
+<head>
+ <script>
+  let lastLevel = localStorage.getItem("lastLevel");
+  
+  localStorage.setItem("lastLevel", 7);
+
+  if (lastLevel != 6) {
+    window.location.href = "../intro/new.html";
+  }
+</script>
+</head>
 <div id="header">
 <img id="logo" src="gg.png" alt="Cyber Logo">
 </div>
