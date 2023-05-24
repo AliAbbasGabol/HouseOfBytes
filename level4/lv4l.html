@@ -13,6 +13,17 @@
 	
     <title>Image Answer Challenge</title>
    <style>
+	     
+h3 {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
     body {
         background-color: #000;
         color: #fff;
@@ -106,7 +117,7 @@
         <h1>Level 4</h1>
     </div>
     <h1>which camera was used to take this image?</h1>
-	<p>To uncover the hidden clues, don't forget to explore the webpage's surroundings. Pay attention to the camera properties; they may hold the key to unraveling the image's secrets.</p>
+	<h3>To uncover the hidden clues, don't forget to explore the webpage's surroundings. Pay attention to the camera properties; they may hold the key to unraveling the image's secrets.</h3>
   
     <div id="image-container">
         <img src="pic.jpg" alt="osnit">
@@ -121,7 +132,6 @@
             <input type="submit" id="submit-button" value="Submit">
         </form>
     </div>
-  <h2>forensics</h2>
     <script>
 	const printButton = document.getElementById('print-button')
 printButton.addEventListener('click', printText)
@@ -135,7 +145,7 @@ function printText() {
 
             var answerInput = document.getElementById("answer-input").value;
 
-            if (answerInput === "NIKON D70s") {
+            if (answerInput === "") {
                 window.location.href = "../level5/doco.html"; // Redirect to the next page
             } else {
                 alert("Wrong answer! Please try again."); // Display an error message
