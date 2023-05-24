@@ -57,7 +57,16 @@
         cursor: pointer;
         font-size: 2vw;
     }
-
+h3 {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
     @media screen and (max-width: 600px) {
         #logo {
             width: 80vw;
@@ -98,7 +107,8 @@
     <h1>Decrypt the text and sumbit it</h1>
 
 <h3>Encrypted text: "yyy.iqqing.eqo"
-    
+     <h3>Hint &#x1F510;: In this poetic realm, where ciphers sway and meanings overwhelm, amidst the verses, seek your clue, a subtle whisper meant just for you. Within the lines that artfully flow, lies a secret path you need to know. Engage your mind, be swift, not slow, take two steps back, let knowledge grow. Amidst the stanzas, you'll surely find, the answer hidden, cleverly entwined. Embrace the rhythm, each syllable's sway, and let the poetry guide your way. So tread the path with a poet's grace, decode the message, conquer this space. Unlock the secret, let it unfold, the treasure awaits, for the clever and bold. &#x1F319;&#x1F521;&#x2728;
+</h3>
         <div id="answer-form">
             <form id="answer-form" onsubmit="validateAnswer(event)">
                 <input type="text" id="answer-input" name="answer" placeholder="Enter your answer" required>
@@ -107,14 +117,14 @@
             </form>
       
     </div>
-<h2>cryptography</h2>
+
     <script>
         function validateAnswer(event) {
             event.preventDefault(); // Prevent form submission
 
             var answerInput = document.getElementById("answer-input").value;
 
-            if (answerInput === "www.google.com") {
+            if (answerInput === "") {
                 window.location.href = "../final/new.html"; // Redirect to the next page
             } else {
                 alert("Wrong answer! Please try again."); // Display an error message
